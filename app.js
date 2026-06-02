@@ -19,7 +19,7 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'http://localhost:3000' // allow your React app
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000'
 }));
 
 app.use(express.json());
